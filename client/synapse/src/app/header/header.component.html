@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button class="logout" *ngIf="loggedIn"  matTooltip="Logout"   (click)="logout()" mat-button>Logout</button>
+    <button class="custom-button" *ngIf="loggedIn"  matTooltip="Click here to View All the Items"   (click)="showUserItems()" mat-button>My Products</button>
+    <button  *ngIf="!loggedIn"  class="align-rightLogin"   (click)="onLoginAndSignUp('login')" mat-button>Login</button>
+    <button *ngIf="!loggedIn" class="align-rightSignUp" (click)="onLoginAndSignUp('signup')" mat-button>SignUp</button>
+  </mat-toolbar-row>
+</mat-toolbar>
