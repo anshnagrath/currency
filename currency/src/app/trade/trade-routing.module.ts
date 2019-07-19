@@ -1,13 +1,13 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product.component';
-import { ItemComponent} from './item.component'
+import { TransactionComponent } from './transaction.component';
+import { TradeComponent } from './trade.component'
 import { CanDeactivateGuard } from '../navigation-guard.service';
 
 const routes: Routes = [
 
-    { path: '', component: ProductComponent, canDeactivate: [CanDeactivateGuard] },
-    { path: 'item', component: ItemComponent }
+    { path: '', component: TradeComponent, canDeactivate: [CanDeactivateGuard] },
+    { path: 'transactions', component: TransactionComponent }
     
 ];
 
@@ -16,4 +16,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)]
 })
 
-export class ProductRoutingModule { }
+export class TradeRoutingModule { }

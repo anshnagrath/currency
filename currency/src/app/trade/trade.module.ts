@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductComponent } from './product.component';
-import { ProductRoutingModule } from './product-routing.module';
+import { TradeComponent } from './trade.component';
+import { TradeRoutingModule } from './trade-routing.module';
 import { MaterialModule } from '../material/material.module';
-import { ItemComponent } from './item.component';
+import { TransactionComponent } from './transaction.component';
 import { DialogComponent } from '../dialog/dialog.component';
 
 
@@ -11,10 +11,10 @@ import { DialogComponent } from '../dialog/dialog.component';
 @NgModule({
   imports: [
     CommonModule,
-    ProductRoutingModule,
+    TradeRoutingModule,
     MaterialModule
   ],
-  declarations: [ProductComponent, DialogComponent, ItemComponent],
+  declarations: [TradeComponent, DialogComponent, TransactionComponent],
   entryComponents: [DialogComponent]
 })
-export class ProductModule { }
+export class TradeModule { }

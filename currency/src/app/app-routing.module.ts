@@ -8,7 +8,7 @@ import {CanDeactivateGuard} from './navigation-guard.service';
 
 const appRoutes: Routes = [
     { path: 'login', component: SignupComponent, pathMatch: 'full'},
-    { path: 'product', loadChildren: '../app/product/product.module#ProductModule', canActivate: [AuthGuard]},
+    { path: 'trade', loadChildren: '../app/trade/trade.module#TradeModule', canActivate: [AuthGuard]},
     { path: '' ,redirectTo:'login',pathMatch:'full'},
     { path: '**', component: NotfoundComponent}
   
