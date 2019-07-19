@@ -26,10 +26,10 @@ export class SignupComponent implements OnDestroy {
   loginMeIn(){
     const login = this.appService.login({ 'username': this.username }).subscribe((res: HttpResponse<Response>) => {
       if (res.status['code'] === 200){
-        this.appService.openSnackBar('Login Sucessfull', true);
+        this.appService.openSnackBar('Login Sucessfull', 'sucess');
         this.router.navigate(['trade']) 
       }else{
-        this.appService.openSnackBar('User not found', true);
+        this.appService.openSnackBar('User not found', 'error');
       }
     });
     this.subscriptions.add(login)
