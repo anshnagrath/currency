@@ -1,19 +1,47 @@
-.productItem{
-    width: 200px;
+.image{
+    display: inline-block;
+}
+.content{
+    display: inline-block;
+    margin-left:50px
+}
+.nocontent{
+    text-align: center;
+    margin-top: 100px
+}
+.allignCenter{
+    text-align: center;
+    margin-top:100px
+}
+.userdetails{
+    margin-left: 87px;
     margin-top: 50px;
-    margin-left: 31px;
-    display: inline-grid !important;
+    margin-bottom: 49px;
 }
-.custom-checkbox{
-    top: 10px;
-    right: 6px;
-    position: absolute;
+.user-custom-heading{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
 }
-.submit-button{
-    background: #3f51b5;
-    color: white;
-    margin: 40px 0px 40px 0px;
-    font-size: 21px;
-    border-radius: 26px;
-    padding: 10px 30px 10px 30px;
+mat-card{
+    margin-bottom: 37px;
+    margin: 10px;
+}
+.addtrade{
+    margin: 24px;
+}
+.mat-button{
+        background-color: #3f51b5;
+    
+        border-radius: 10px;  
+        margin-top: 10px;
+        font-size: 17px;
+}
+.disabled{
+    background-color: gray !important;
+
+    border-radius: 10px;  
+    margin-top: 10px;
+    font-size: 17px;
 }

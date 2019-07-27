@@ -11,7 +11,6 @@ const appRoutes: Routes = [
     { path: 'trade', loadChildren: '../app/trade/trade.module#TradeModule', canActivate: [AuthGuard]},
     { path: '' ,redirectTo:'login',pathMatch:'full'},
     { path: '**', component: NotfoundComponent}
-  
 ]
 
 

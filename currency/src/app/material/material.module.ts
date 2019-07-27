@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatProgressSpinnerModule } from '@angular/material';
+import { MatProgressSpinnerModule, MatSelectModule } from '@angular/material';
 import {MatButtonModule,
   MatMenuModule,
   MatToolbarModule,
@@ -25,6 +25,7 @@ import {MatButtonModule,
     MatDialogModule,
     MatProgressSpinnerModule,
     MatCardModule,
+    MatSelectModule,
     MatFormFieldModule,
     MatInputModule
 
@@ -34,6 +35,7 @@ import {MatButtonModule,
     MatSnackBarModule,
     MatDialogModule,
     MatButtonModule,
+    MatSelectModule,
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,

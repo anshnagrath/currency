@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SignupComponent } from './signup/signup.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorInterceptor, HTTPStatus } from './http-error.interceptor';
 import { AppService } from './app.service';
@@ -30,6 +30,7 @@ import { CanDeactivateGuard } from './navigation-guard.service';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     MaterialModule,
     ReactiveFormsModule,
 

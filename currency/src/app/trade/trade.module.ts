@@ -5,6 +5,7 @@ import { TradeRoutingModule } from './trade-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { TransactionComponent } from './transaction.component';
 import { DialogComponent } from '../dialog/dialog.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,6 +13,7 @@ import { DialogComponent } from '../dialog/dialog.component';
   imports: [
     CommonModule,
     TradeRoutingModule,
+    FormsModule,
     MaterialModule
   ],
   declarations: [TradeComponent, DialogComponent, TransactionComponent],

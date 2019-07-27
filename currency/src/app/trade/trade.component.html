@@ -1,15 +1,32 @@
 <div>
-  <mat-card class="productItem" *ngFor="let product of allProducts;">
-      <mat-checkbox (input)="selectedProducts($event.target.checked,product._id)"   class="custom-checkbox"></mat-checkbox>
-    <img width=100px height=100px  [src]="product.image"/>
-    <div>
-    <p>{{product.brand}}</p>
-    <p>{{product.name}}</p>
-    <p>{{product.shortDescription}}</p>
-    <p>{{product.price.cost}}</p>
+<div class="user-custom-heading">
+  User Info:  
+</div>
+<div *ngIf="userData && userData.currencies.length > 0   else  nocontent">
+      <div class="userdetails">
+      <p> User Name: {{userData.name}}</p>
+      <p> Admin : {{userData.isadmin ? 'YES': 'NO'}}</p>
+      </div>
+    <mat-card class="productItem" *ngFor="let  currency of userData.currencies" >
+     <div style="display: inline-block;margin-left:50px">
+       <div>
+           <p> currency  : {{currency.currencytype}}</p>
+       </div>  
+       <div>
+           <p> Amount Present : {{currency.ammount}}</p>
+       </div> 
     </div>
-  </mat-card>
-  <div align=center *ngIf="allProducts">
-  <button mat-button (click)="submitProductList()" class="submit-button">Add to My Product</button>
+   
+    </mat-card>
+   <div class="addtrade" align=center>
+  <button class="mat-button" (click)="navigateToTransactions()" mat-button>Add New Trade</button>
+  </div>   
+  </div> 
+ 
+  <ng-template #nocontent>
+    <div class="allignCenter">
+        <p>Loading please wait ....</p>
+
+    </div>
+  </ng-template>
   </div>
-</div> 

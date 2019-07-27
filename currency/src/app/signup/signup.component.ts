@@ -6,9 +6,6 @@ import { Subscription } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
 import { Response } from '../interfaces/interfaces';
 
-
-
-
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',

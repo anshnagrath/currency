@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog.component';
 import { HttpResponse } from '@angular/common/http';
-
+import { Response } from '../interfaces/interfaces';
 
 @Component({
   selector: 'app-trade',
@@ -15,18 +15,28 @@ import { HttpResponse } from '@angular/common/http';
 export class TradeComponent implements OnInit, OnDestroy {
   allProducts: Observable<any>;
   userProducts: Array<String> = [];
-  subscriptions: Array<Subscription> = [ ];
+  userData: HttpResponse<Response>;
+  subscriptions: Subscription =  new Subscription();
   constructor(public appService: AppService, public router: Router, public matDialog: MatDialog) {
-   
    }
-
   ngOnInit() {
+   const subscribtion =  this.appService.getUserInfo().subscribe((res: HttpResponse<Response>) => {
+      if (res.status['code'] === 200 && res['data']) {
+         this.userData = res['data'];
 
+      }
+    });
+    (subscribtion)?this.subscriptions.add(subscribtion) : '';
+  }
+  navigateToTransactions() {
+    if (this.userData['isAdmin'] === 'false') {
+    this.router.navigate(['trade/transactions']);
+    }else{
+    this.appService.openSnackBar('Admin is not allowed to post a trade');
+  }
   }
 
-  ngOnDestroy(){
-    this.subscriptions.forEach((subscription)=>{
-      subscription.unsubscribe();
-    })
+  ngOnDestroy() {
+    (this.subscriptions) ? this.subscriptions.unsubscribe() : '' ;
   }
 }

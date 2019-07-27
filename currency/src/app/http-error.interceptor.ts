@@ -56,9 +56,9 @@ export class HTTPStatus {
           }), tap(
         (event: any) => {
           if (event instanceof HttpResponse) {
-            console.log(event.headers.get('x-access-token'),event,'eee')
+          //  console.log(event.headers.get('x-access-token'),event,'eee')
               this.responseCounter = Number(this.responseCounter)+ Number(1);
-              console.log(event,event.headers.get('x-access-token'),'jwt',event.body.status.code)
+          //    console.log(event,event.headers.get('x-access-token'),'jwt',event.body.status.code)
               if(request.url.includes("login") &&  event.body.status.code == 200){
                 localStorage.setItem("x-access-token",event.headers.get('x-access-token'));
                 localStorage.setItem("id",event.body.data[0].id);
@@ -75,7 +75,7 @@ export class HTTPStatus {
         }
       ), finalize(() => {
         if (this.requestCounter === this.responseCounter) {
-          console.log('stop loader');
+        //  console.log('stop loader');
           this.httpstatus.setHttpStatus(false)
           this.requestCounter = 0;
           this.responseCounter = 0;

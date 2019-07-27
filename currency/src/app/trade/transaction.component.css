@@ -13,3 +13,60 @@
     text-align: center;
     margin-top:100px
 }
+.card{
+    min-width: 400px;
+}
+.mat-form-field-underline {
+display: none !important
+}
+.currencyinput{
+    border: 1px solid;
+    padding: 8px;
+    border-radius: 8px;
+}
+.curencyNumber{
+    width:50% !important
+}
+mat-select{
+    width:50% !important
+}
+.submitbutton{
+    margin-top: 30px
+    
+}
+.submitbutton:disabled{
+    margin-top: 30px;
+    background:grey !important;
+    
+}
+.enable{
+    background:#3f51b5;
+    color:white;
+}
+
+.enable:disabled{
+    background-color:rgba(0,0,0,.12);
+    color:white;
+}
+.transactioncards{
+    min-width: 254px;
+    float: left;
+    position: relative;
+    top: 16px;
+    margin-bottom: 18px;
+
+    margin-left: 14px;
+
+}
+.deleteIcon{
+    float: right;
+    position: relative;
+    right: 0px;
+}
+.transactionLabel{
+    position: relative;
+    right: 40%;
+
+    bottom: 16px;
+    font-size: 28px;
+}
