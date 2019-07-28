@@ -29,7 +29,8 @@ export class TradeComponent implements OnInit, OnDestroy {
     (subscribtion)?this.subscriptions.add(subscribtion) : '';
   }
   navigateToTransactions() {
-    if (this.userData['isAdmin'] === 'false') {
+    console.log(this.userData,'minnnnn' );
+    if (this.userData['isadmin'] === false) {
     this.router.navigate(['trade/transactions']);
     }else{
     this.appService.openSnackBar('Admin is not allowed to post a trade');
